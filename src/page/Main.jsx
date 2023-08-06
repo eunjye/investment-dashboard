@@ -1,5 +1,5 @@
 import React from 'react';
-import useLogin from '../hook/useLogin';
+import useLogin from '../hook/useAuth';
 import { Navigate } from 'react-router';
 import { PATH_PRIVATE_ROOT } from '../constant/path';
 

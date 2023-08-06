@@ -35,10 +35,16 @@ const optSize = {
 const cssButtonDefault = () => {
   return css({
     borderRadius: '4px',
+
+    '&:disabled': {
+      background: '#efefef',
+      cursor: 'default'
+    }
   });
 };
 
-const Button = ({ children, onClick, size = 'md', type = 'default' }) => {
+const Button = ({ children, onClick, size = 'md', type = 'default', disabled }) => {
+  const buttonProps = disabled ? { disabled: true } : {};
   const cssButtonOptional = () => {
     return css({
       ...optSize[size],
@@ -47,7 +53,7 @@ const Button = ({ children, onClick, size = 'md', type = 'default' }) => {
   };
 
   return (
-    <button onClick={onClick} css={[cssButtonDefault, cssButtonOptional]}>
+    <button onClick={onClick} css={[cssButtonDefault, cssButtonOptional]} {...buttonProps}>
       {children}
     </button>
   );
