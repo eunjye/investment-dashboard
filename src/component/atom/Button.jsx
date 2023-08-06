@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+import { css } from "@emotion/react";
+
 const optType = {
   default: {
     background: '#fff',
@@ -36,7 +38,7 @@ const cssButtonDefault = () => {
   });
 };
 
-const Button = ({ label, onClick, size = 'md', type = 'default' }) => {
+const Button = ({ children, onClick, size = 'md', type = 'default' }) => {
   const cssButtonOptional = () => {
     return css({
       ...optSize[size],
@@ -46,7 +48,7 @@ const Button = ({ label, onClick, size = 'md', type = 'default' }) => {
 
   return (
     <button onClick={onClick} css={[cssButtonDefault, cssButtonOptional]}>
-      {label}
+      {children}
     </button>
   );
 };

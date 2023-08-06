@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+import { css } from "@emotion/react";
+
 const optSize = {
   sm: {
     fontSize: '12px',
