@@ -18,16 +18,16 @@ const optSize = {
 const cssInputDefault = () => {
   return css({
     borderRadius: '4px',
-    border: '1px solid #444'
+    border: '1px solid #444',
   });
-}
+};
 
 const Input = ({ type = 'text', placeholder, value, onChange, size = 'md' }) => {
   const cssInputOptional = () => {
     return css({
       ...optSize[size],
     });
-  }
+  };
 
   return (
     <input

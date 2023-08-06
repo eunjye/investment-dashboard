@@ -3,16 +3,16 @@
 const optType = {
   default: {
     background: '#fff',
-    color: 'rgb(36, 41, 47)'
+    color: 'rgb(36, 41, 47)',
   },
   primary: {
     background: '#ffcc00',
-    color: '#222'
+    color: '#222',
   },
   secondary: {
     background: 'blue',
-    color: '#fff'
-  }
+    color: '#fff',
+  },
 };
 
 const optSize = {
@@ -32,23 +32,20 @@ const optSize = {
 
 const cssButtonDefault = () => {
   return css({
-    borderRadius: '4px'
+    borderRadius: '4px',
   });
-}
+};
 
 const Button = ({ label, onClick, size = 'md', type = 'default' }) => {
   const cssButtonOptional = () => {
     return css({
       ...optSize[size],
-      ...optType[type]
+      ...optType[type],
     });
-  }
+  };
 
   return (
-    <button 
-      onClick={onClick}
-      css={[cssButtonDefault, cssButtonOptional]}
-    >
+    <button onClick={onClick} css={[cssButtonDefault, cssButtonOptional]}>
       {label}
     </button>
   );
