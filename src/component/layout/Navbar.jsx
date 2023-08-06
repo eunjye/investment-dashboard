@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../atom/Button';
+import useAuth from '../../hook/useAuth';
 
 const Navbar = () => {
+  const { handleLogout } = useAuth();
+
   return (
     <div>
-      <Link to={'/movie'}>포트폴리오 관리</Link>
-      <Link to={'/cart'}>카트</Link>
-      <Link to={'doublenav/weather/Seoul'}>날씨</Link>
+      <Link to={'/private/mypage'}>포트폴리오 관리</Link>
+      <Button onClick={handleLogout}>로그아웃</Button>
     </div>
   );
 };

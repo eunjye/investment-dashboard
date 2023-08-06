@@ -5,15 +5,15 @@ import { css } from "@emotion/react";
 const optSize = {
   sm: {
     fontSize: '12px',
-    padding: '3px 12px',
+    height: '26px'
   },
   md: {
     fontSize: '14px',
-    padding: '5px 16px',
+    height: '32px'
   },
   lg: {
     fontSize: '16px',
-    padding: '9px 20px',
+    height: '40px'
   },
 };
 

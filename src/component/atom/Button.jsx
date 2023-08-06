@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 const optType = {
   default: {
     background: '#fff',
-    color: 'rgb(36, 41, 47)',
+    color: '#222',
   },
   primary: {
     background: '#ffcc00',
@@ -20,21 +20,23 @@ const optType = {
 const optSize = {
   sm: {
     fontSize: '12px',
-    padding: '3px 12px',
+    height: '26px',
   },
   md: {
     fontSize: '14px',
-    padding: '5px 16px',
+    height: '32px'
   },
   lg: {
     fontSize: '16px',
-    padding: '9px 20px',
+    height: '40px'
   },
 };
 
 const cssButtonDefault = () => {
   return css({
     borderRadius: '4px',
+    border: '1px solid #444',
+    verticalAlign: 'middle',
 
     '&:disabled': {
       background: '#efefef',
@@ -54,7 +56,7 @@ const Button = ({ children, onClick, size = 'md', type = 'default', disabled }) 
 
   return (
     <button onClick={onClick} css={[cssButtonDefault, cssButtonOptional]} {...buttonProps}>
-      {children}
+      <span>{children}</span>
     </button>
   );
 };

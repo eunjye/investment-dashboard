@@ -1,14 +1,13 @@
-import React from 'react';
-import Button from '../component/atom/Button';
-import useAuth from '../hook/useAuth';
+import AssetManager from "../component/asset/AssetManager";
 
 const Mypage = () => {
-  const { handleLogout } = useAuth();
 
   return (
     <div>
-      마이페이지
-      <Button onClick={handleLogout}>로그아웃</Button>
+      <h1>마이페이지</h1>
+      
+    <AssetManager />
+      
     </div>
   );
 };

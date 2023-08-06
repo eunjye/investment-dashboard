@@ -3,17 +3,32 @@
     {
       "id": 1,
       "username": "1234",
-      "password": "1234"
+      "password": "1234",
+      "assets": [
+        { "id": 1, "type": "주식", "name": "Apple", "amount": 10020 },
+        { "id": 2, "type": "채권", "name": "Apple", "Government Bond": 2000 },
+        { "id": 1, "type": "현금", "name": "Apple", "Cash": 3000 }
+      ]
     },
     {
       "id": 2,
       "username": "1111",
-      "password": "1111"
+      "password": "1111",
+      "assets": [
+        { "id": 1, "type": "주식", "name": "Apple", "amount": 10200 },
+        { "id": 2, "type": "채권", "name": "Apple", "Government Bond": 2000 },
+        { "id": 1, "type": "현금", "name": "Apple", "Cash": 3000 }
+      ]
     },
     {
       "id": 3,
       "username": "0000",
-      "password": "0000"
+      "password": "0000",
+      "assets": [
+        { "id": 1, "type": "주식", "name": "Apple", "amount": 1200 },
+        { "id": 2, "type": "채권", "name": "Apple", "Government Bond": 2000 },
+        { "id": 1, "type": "현금", "name": "Apple", "Cash": 3000 }
+      ]
     }
   ]
 }

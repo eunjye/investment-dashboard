@@ -45,10 +45,10 @@ const Login = () => {
   return (
     <>
       <h2>ID 입력</h2>
-      <Input size='md' placeholder={'아이디를 입력해주세요.'} value={userId} onChange={handleInputId} />
+      <Input placeholder={'아이디를 입력해주세요.'} value={userId} onChange={handleInputId} />
       <h2>Password 입력</h2>
-      <Input type="password" size='md' placeholder={'비밀번호를 입력해주세요.'} value={userPw} onChange={handleInputPw} />
-      <Button size='lg' onClick={handleBtnLogin} disabled={isLogging}>로그인</Button>
+      <Input type="password" placeholder={'비밀번호를 입력해주세요.'} value={userPw} onChange={handleInputPw} />
+      <Button onClick={handleBtnLogin} disabled={isLogging}>로그인</Button>
     </>
   );
 };
