@@ -4,9 +4,9 @@ module.exports = {
         "es2021": true
     },
     "extends": [
+        "react-app",
         "eslint:recommended",
-        "plugin:react/recommended",
-        "prettier"
+        "plugin:react/recommended"
     ],
     "overrides": [
     ],
@@ -18,5 +18,8 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/no-unknown-property": ["error", { "ignore": ["css"] }]
     }
 }
