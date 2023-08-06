@@ -1,7 +1,19 @@
 /** @jsxImportSource @emotion/react */
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import GlobalStyle from './style/GlobalStyle';
 
 const App = () => {
-  return <div className="App">안녕</div>;
+  return (
+    <>
+      <GlobalStyle />
+      <BrowserRouter>
+        <NavbarLayout />
+        <Routes>
+          <Route></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
 };
 
 export default App;
