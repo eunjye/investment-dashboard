@@ -1,15 +1,16 @@
-import { useSetRecoilState } from 'recoil';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { assetState } from '../recoil/atom/assetState';
 import axios from 'axios';
-import useAuth from './useAuth';
+import { userId } from '../recoil/atom/loginState';
 
 const useAsset = () => {
-  const { userId } = useAuth(); // 필요한 경우 useAuth 훅을 가져옵니다.
+  const atomUserId = useRecoilValue(userId);
   const setAssetData = useSetRecoilState(assetState);
 
   const handleAsset = async () => {
     try {
-      const res = await axios.get('http://localhost:3002/users', { params: { username: userId } });
+      console.log(atomUserId)
+      const res = await axios.get('http://localhost:3002/users', { params: { username: atomUserId } });
       const userData = res.data[0];
       const assets = userData.assets;
       setAssetData(assets);
@@ -20,10 +21,10 @@ const useAsset = () => {
     }
   };
   
-
   const deleteAsset = async ({ id: assetId }) => {
     try {
-      const res = await axios.get('http://localhost:3002/users', { params: { username: userId } });
+      console.log(atomUserId)
+      const res = await axios.get('http://localhost:3002/users', { params: { username: atomUserId } });
       const userData = res.data[0];
       const updateAssets = userData.assets.filter((item) => item.id !== assetId);
 
@@ -34,9 +35,7 @@ const useAsset = () => {
       console.log(`asset delete error :: ${err}`);
     }
   };
-  
 
-  
   return { handleAsset, deleteAsset };
 };
 

@@ -1,19 +1,19 @@
 /** @jsxImportSource @emotion/react */
 
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 const optSize = {
   sm: {
     fontSize: '12px',
-    height: '26px'
+    height: '26px',
   },
   md: {
     fontSize: '14px',
-    height: '32px'
+    height: '32px',
   },
   lg: {
     fontSize: '16px',
-    height: '40px'
+    height: '40px',
   },
 };
 

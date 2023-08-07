@@ -12,10 +12,10 @@ const Login = () => {
 
   const handleInputId = (event) => {
     setUserId(event.target.value);
-  }
+  };
   const handleInputPw = (event) => {
     setUserPw(event.target.value);
-  }
+  };
 
   const login = async () => {
     try {
@@ -39,7 +39,7 @@ const Login = () => {
   }, [isLogging]);
 
   if (isLoggedIn) {
-    return <Navigate to="/private" replace /> // 첫번째 private 페이지로 리다이렉트
+    return <Navigate to="/private" replace />; // 첫번째 private 페이지로 리다이렉트
   }
 
   return (
@@ -47,8 +47,15 @@ const Login = () => {
       <h2>ID 입력</h2>
       <Input placeholder={'아이디를 입력해주세요.'} value={userId} onChange={handleInputId} />
       <h2>Password 입력</h2>
-      <Input type="password" placeholder={'비밀번호를 입력해주세요.'} value={userPw} onChange={handleInputPw} />
-      <Button onClick={handleBtnLogin} disabled={isLogging}>로그인</Button>
+      <Input
+        type="password"
+        placeholder={'비밀번호를 입력해주세요.'}
+        value={userPw}
+        onChange={handleInputPw}
+      />
+      <Button onClick={handleBtnLogin} disabled={isLogging}>
+        로그인
+      </Button>
     </>
   );
 };

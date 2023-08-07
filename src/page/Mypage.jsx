@@ -1,13 +1,11 @@
-import AssetManager from "../component/asset/AssetManager";
+import AssetManager from '../component/asset/AssetManager';
 
 const Mypage = () => {
-
   return (
     <div>
       <h1>마이페이지</h1>
-      
-    <AssetManager />
-      
+
+      <AssetManager />
     </div>
   );
 };

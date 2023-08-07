@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 const optType = {
   default: {
@@ -24,11 +24,11 @@ const optSize = {
   },
   md: {
     fontSize: '14px',
-    height: '32px'
+    height: '32px',
   },
   lg: {
     fontSize: '16px',
-    height: '40px'
+    height: '40px',
   },
 };
 
@@ -40,8 +40,8 @@ const cssButtonDefault = () => {
 
     '&:disabled': {
       background: '#efefef',
-      cursor: 'default'
-    }
+      cursor: 'default',
+    },
   });
 };
 

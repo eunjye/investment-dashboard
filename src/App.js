@@ -6,9 +6,7 @@ import PrivateRoute from './context/PrivateRoute';
 import Mypage from './page/Mypage';
 import Main from './page/Main';
 
-
 const App = () => {
-  
   return (
     <>
       <GlobalStyle />

@@ -13,21 +13,13 @@ const AssetManager = () => {
     handleAsset();
   }, []);
 
-
   return (
     <div>
-      {
-        arrAsset.length >= 1 && 
+      {arrAsset.length >= 1 &&
         arrAsset.map((assetItem, idx) => {
           return <AssetCard key={idx} asset={assetItem} />;
-        })
-        
-      }
-      {
-        arrAsset.length < 1 && (
-          <strong>아이템이 없습니다.</strong>
-        )
-      }
+        })}
+      {arrAsset.length < 1 && <strong>아이템이 없습니다.</strong>}
     </div>
   );
 };

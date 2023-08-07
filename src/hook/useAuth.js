@@ -10,12 +10,14 @@ const useAuth = () => {
 
   const handleLogin = async (userId, userPw) => {
     try {
-      const res = await axios.get('http://localhost:3002/users', { params: { username: userId, password: userPw }});
+      const res = await axios.get('http://localhost:3002/users', {
+        params: { username: userId, password: userPw },
+      });
       const user = res.data[0];
       if (user) {
         setIsLoggedIn(true);
         setAtomUserId(userId);
-        localStorage.setItem('token', 'loggedIn');
+        localStorage.setItem('token', userId);
         return true;
       } else {
         alert('아이디나 패스워드를 확인해주세요.');

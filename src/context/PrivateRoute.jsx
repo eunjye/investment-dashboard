@@ -10,7 +10,7 @@ const PrivateRoute = (Component) => {
     return <Navigate to="/login" replace />;
   }
 
-  if(location.pathname === '/private') {
+  if (location.pathname === '/private') {
     return <Navigate to={PATH_PRIVATE_ROOT} replace />;
   }
   return (

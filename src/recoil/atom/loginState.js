@@ -7,5 +7,5 @@ export const loginState = atom({
 
 export const userId = atom({
   key: 'userId',
-  default: ''
-})
+  default: localStorage.getItem('token') || '',
+});
