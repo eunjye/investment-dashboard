@@ -17,6 +17,7 @@ const useAsset = () => {
 
       return assets;
     } catch (err) {
+      alert('자산 조회를 실패했습니다.')
       console.error(`asset error ::${err}`);
     }
   };
@@ -25,18 +26,27 @@ const useAsset = () => {
     try {
       const res = await axios.get('http://localhost:3002/users', { params: { username: atomUserId } });
       const userData = res.data[0];
-      console.log({ ...userData }, '!!')
       const updateAssets = userData.assets.filter((item) => item.id !== assetId);
 
       await axios.put(`http://localhost:3002/users/${userData.id}`, { ...userData, assets: updateAssets });
 
       setAssetData(updateAssets);
     } catch (err) {
+      alert('삭제를 실패했습니다.')
       console.log(`asset delete error :: ${err}`);
     }
   };
+  
+  const addAsset = async ({ id: assetId }) => {
+    try {
+      
+      // 추가하기
+    } catch (err) {
+      console.log(`asset add error :: ${err}`);
+    }
+  };
 
-  return { handleAsset, deleteAsset };
+  return { handleAsset, deleteAsset, addAsset };
 };
 
 export default useAsset;
