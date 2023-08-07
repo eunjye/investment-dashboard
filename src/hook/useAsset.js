@@ -23,12 +23,12 @@ const useAsset = () => {
   
   const deleteAsset = async ({ id: assetId }) => {
     try {
-      console.log(atomUserId)
       const res = await axios.get('http://localhost:3002/users', { params: { username: atomUserId } });
       const userData = res.data[0];
+      console.log({ ...userData }, '!!')
       const updateAssets = userData.assets.filter((item) => item.id !== assetId);
 
-      await axios.put('http://localhost:3002/users', { ...userData, assets: updateAssets });
+      await axios.put(`http://localhost:3002/users/${userData.id}`, { ...userData, assets: updateAssets });
 
       setAssetData(updateAssets);
     } catch (err) {
